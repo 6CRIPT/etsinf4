@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<BIF VERSION="0.3"  xmlns="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3 http://www.cs.ubc.ca/labs/lci/fopi/ve/XMLBIFv0_3/XMLBIFv0_3.xsd">
+<NETWORK>
+<NAME>Untitled</NAME>
+<PROPERTY>detailed = </PROPERTY>
+<PROPERTY>short = </PROPERTY>
+
+<VARIABLE TYPE="nature">
+	<NAME>Huellas</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7763.09228515625, 5433.0751953125)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Motivo</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7872.0693359375, 5413.486328125)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>No-coartada</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7993.40478515625, 5424.87353515625)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Culpable</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7878.513671875, 5604.20361328125)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>Video</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (7860.2998046875, 5264.84033203125)</PROPERTY>
+</VARIABLE>
+
+<VARIABLE TYPE="nature">
+	<NAME>amigo</NAME>
+	<OUTCOME>T</OUTCOME>
+	<OUTCOME>F</OUTCOME>
+	<PROPERTY>position = (8049.48828125, 5275.51220703125)</PROPERTY>
+</VARIABLE>
+
+<DEFINITION>
+	<FOR>Huellas</FOR>
+	<TABLE>0.9 0.1</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Motivo</FOR>
+	<GIVEN>Video</GIVEN>
+	<TABLE>0.9 0.1 0.4 0.6</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>No-coartada</FOR>
+	<GIVEN>amigo</GIVEN>
+	<TABLE>0.2 0.8 0.4 0.6</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Culpable</FOR>
+	<GIVEN>Huellas</GIVEN>
+	<GIVEN>Motivo</GIVEN>
+	<GIVEN>No-coartada</GIVEN>
+	<TABLE>0.9 0.1 0.7 0.3 0.5 0.5 0.3 0.7 0.8 0.2 0.8 0.2 0.3 0.7 0.001 0.999</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>Video</FOR>
+	<TABLE>0.7 0.3</TABLE>
+</DEFINITION>
+
+<DEFINITION>
+	<FOR>amigo</FOR>
+	<TABLE>0.6 0.4</TABLE>
+</DEFINITION>
+</NETWORK>
+</BIF>
